@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Using linear layout since I wanted to arrange all the views in a vertical fashion-->
+<layout>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="@string/shoe_list"
+        android:textColor="@android:color/black" />
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+      <LinearLayout
+          android:id="@+id/shoeList"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical" />
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addShoe"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:contentDescription="@string/add_shoe_desc"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_add" />
+  </LinearLayout>
+</layout>
